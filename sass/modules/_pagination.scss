@@ -1,0 +1,20 @@
+.screen-reader-text {
+    display: none;
+    visibility: hidden;
+}
+.nav-links {
+    text-align: center;
+}
+
+.page-numbers {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: $key-color;
+    padding: 4px 15px;
+    @include mq(small){
+        font-size: 1rem;
+    }
+}
+.page-numbers.current {
+    color: grey;
+}

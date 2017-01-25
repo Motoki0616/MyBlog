@@ -16,6 +16,7 @@ header {
         padding: 15px 0;
         border-top: 1px solid $key-color;
         border-bottom: 1px solid $key-color;
+        font-family: $font-family--primary;
         @include mq(small){
             padding: 10px 0;
         }

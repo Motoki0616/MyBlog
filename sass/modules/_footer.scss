@@ -1,7 +1,9 @@
 footer {
+    font-family: $font-family--primary;
+    letter-spacing: 0.05em;
     max-width: 940px;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 100px;
     border-top: 1px solid $key-color;
     padding: 30px 0;
     display: flex;
@@ -15,6 +17,7 @@ footer {
 }
 .sns {
     order: 2;
+    font-weight: bold;
     @include mq(small){
         order: 1;
         text-align: center;
@@ -36,6 +39,7 @@ footer {
 .copyright {
     order: 1;
     font-size: 0.8rem;
+    font-weight: bold;
     display: block;
     text-align: center;
     @include mq(small){

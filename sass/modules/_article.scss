@@ -1,7 +1,7 @@
 .main-contents {
     max-width: 940px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 60px;
     @include mq(medium){
         text-align: left;
         padding: 50px 10px 0;
@@ -11,23 +11,41 @@
     }
 }
 
-.article__each {
+.archive__title, .each__title {
     text-align: center;
+    font-size: 3rem;
+    @include mq(small){
+        font-size: 1.5rem;
+    }
+    &:after {
+        content: '';
+        display: block;
+        background-color: $key-color;
+        height: 2px;
+        width: 50px;
+        margin: 20px auto 40px;
+    }
+    span {
+        font-size: 1rem;
+    }
+}
+
+.featured {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 50px;
-    background: url(../images/38.jpg) center center no-repeat;
-    background-size: cover;
+    margin-bottom: 100px;
     height: 400px;
     @include mq(medium){
         text-align: left;
-        height: 300px;
+        height: 280px;
+        margin-bottom: 50px;
     }
-    .article__box {
+    .featured__box {
         width: 50%;
         padding: 15px;
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0,0,0,0.8);
         color: #fff;
+        text-align: center;
         @include mq(medium){
             width: 65%;
             padding: 5px;
@@ -35,64 +53,172 @@
         .border {
             border: 1px solid $bg-color;
             height: 100%;
-            padding: 50px 15px;
+            position: relative;
+            @include mq(medium){
+                padding: 50px 15px;
+            }
+            @include mq(small){
+                padding: 50px 20px;
+            }
         }
-        .article__info{
+        .position-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 80%;
+        }
+        .featured__info{
             font-size: 0.8rem;
             letter-spacing: 0.1em;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
             @include mq(medium){
                 font-size: 0.6rem;
             }
-            .article__cat {
+            .featured__cat a{
+                font-family: $font-family--primary;
                 display: inline-block;
                 padding-left: 10px;
                 background-color: $key-color;
+                color: #fff;
                 padding: 0 10px;
                 margin-left: 10px;
             }
         }
-        .article__title {
-            font-size: 1.6rem;
+        .featured__title a{
+            display: block;
+            font-size: 1.5rem;
             line-height: 1.5em;
             letter-spacing: 0.02em;
+            color: #fff;
             @include mq(medium){
+                font-size: 1.3rem;
                 margin: 20px 0 30px;
             }
             @include mq(small){
                 font-size: 1rem;
             }
         }
-        .article__description {
-            margin-top: 30px;
-            font-size: 0.8rem;
-            line-height: 1.8em;
-            @include mq(medium){
-                display: none;
-            }
-        }
-        .btn__detail a{
+        .btn__morelink a {
+            text-align: center;
             letter-spacing: 0.05em;
             display: block;
             color: #fff;
             background-color: $key-color;
             width: 150px;
             padding: 10px 0;
-            margin: 30px auto 0;
+            margin: 0 auto;
+            margin-top: 30px;
             transition: box-shadow 0.2s ease-in;
+            font-size: 0.8rem;
             &:hover {
                 box-shadow: 0 5px 10px rgba(0,0,0,0.4);
             }
             @include mq(medium){
-                margin: 10px 0;
+                margin: 10px auto 0;
                 text-align: center;
                 width: 50%;
             }
             @include mq(small){
-                margin: 10px 0;
+                font-size: 0.6rem;
                 text-align: center;
-                width: 100%;
+                width: 80%;
             }
         }
     }
+}
+
+.article__container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article__box {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.article__each {
+    text-align: center;
+    width: 46%;
+    margin-right: 8%;
+    margin-bottom: 100px;
+    @include mq(small){
+        width: 100%;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+    &:nth-child(2n){
+        margin-right: 0;
+    }
+    .article__image {
+        height: 270px;
+        @include mq(small){
+            height: 200px;
+        }
+    }
+    .article__info{
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        margin: 20px 0 10px;
+        @include mq(medium){
+            font-size: 0.6rem;
+        }
+        .article__cat a{
+            font-family: $font-family--primary;
+            display: inline-block;
+            padding-left: 10px;
+            background-color: $key-color;
+            color: #fff;
+            padding: 0 10px;
+            margin-left: 10px;
+        }
+    }
+
+    .article__title a {
+        display: block;
+        font-size: 1.3rem;
+        line-height: 1.5em;
+        letter-spacing: 0.02em;
+        @include mq(medium){
+            font-size: 1.3rem;
+            margin: 20px 0 30px;
+        }
+        @include mq(small){
+            font-size: 1rem;
+            margin: 5px 0 10px;
+        }
+    }
+
+    .btn__morelink a {
+        letter-spacing: 0.05em;
+        display: block;
+        color: #fff;
+        background-color: $key-color;
+        width: 150px;
+        padding: 10px 0;
+        margin: 0 auto;
+        margin-top: 20px;
+        transition: box-shadow 0.2s ease-in;
+        font-size: 0.8rem;
+        text-align: center;
+        &:hover {
+            box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+        }
+        @include mq(medium){
+            margin: 10px auto 0;
+            text-align: center;
+            width: 50%;
+        }
+        @include mq(small){
+            font-size: 0.6rem;
+            margin: 0 auto;
+            text-align: center;
+            width: 50%;
+        }
+    }
+
+
+
+
 }

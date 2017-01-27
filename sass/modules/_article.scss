@@ -41,6 +41,7 @@
         margin-bottom: 50px;
     }
     .featured__box {
+        height: 400px;
         width: 50%;
         padding: 15px;
         background-color: rgba(0,0,0,0.8);
@@ -49,6 +50,7 @@
         @include mq(medium){
             width: 65%;
             padding: 5px;
+            height: 280px;
         }
         .border {
             border: 1px solid $bg-color;

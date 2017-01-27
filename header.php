@@ -9,7 +9,7 @@
 <body>
 <div class="wrapper">
 	<header>
-        <h1 class="logo"><a href="/MyBlog"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="ど田舎のWebDeveloper in Vancouver"></a></h1>
+        <h1 class="logo"><a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="ど田舎のWebDeveloper in Vancouver"></a></h1>
 		<nav class="navbar">
             <?php $defaults = array(
               	'theme_location'  => 'primary-menu',

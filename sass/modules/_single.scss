@@ -45,6 +45,13 @@
         @include mq(medium){
             padding: 0 10px;
         }
+        a {
+            font-weight: bold;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
         p {
             font-size : 1.1rem;
             line-height : 2;

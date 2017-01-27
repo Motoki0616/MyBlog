@@ -3,7 +3,8 @@ header {
     @include mq(medium){
         padding: 0 10px;
     }
-    .logo img {
+    .logo {
+        width: 332px;
         margin: 50px auto 0;
         @include mq(small){
             width: 200px;

@@ -4,8 +4,9 @@ My blog is named “Super Countryside Developer” since I grew up in the countr
 My blog documents my web development and design journey to readers. 
 
 ## Design Concept
-This is a blog site so I wanted readers to foucs on my article contents. I removed unnecessary things as possible as I can and make enought space around the contents.  
-I used Sherwood Green(#0F4C3A) as a key color, Catskill White(#E6EBE1) as a background color.　I wanted to express Countryside view as the blog name using the colors.
+This is a blog site so I wanted readers to foucs on my article contents. I removed unnecessary things as possible as I can and make white space around the contents.  
+I used Sherwood Green(#0F4C3A) as a key color, Catskill White(#E6EBE1) as a background color.  
+I wanted to express Countryside atmosphere as the blog name using the colors.
 
 ## Code architecture for CSS
 * BEM (http://getbem.com/naming)
